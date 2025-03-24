@@ -1,12 +1,6 @@
-
-import SearchBar from '../SearchBar/SearchBar'
-import ImageGallery from '../ImageGallery/ImageGallery'
-import {searchImages} from '../../unsplash-api'
 import ClipLoader from 'react-spinners/ClipLoader'
-import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn'
 
-import { useState, useEffect } from 'react';
-import ImageModal from '../ImageModal/ImageModal';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import { Toaster } from 'react-hot-toast'
 
