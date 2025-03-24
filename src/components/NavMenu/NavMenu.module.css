@@ -1,0 +1,21 @@
+.nav
+{
+    display: flex;
+    padding: 0px 32px;
+    gap: 16px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 32px;
+}
+
+.link
+{
+    padding: 16px 0px;
+    color: black;
+    transition: color 250ms ease-in;
+    text-decoration: none;
+}
+
+.link:hover, .active
+{
+    color: rgb(255, 90, 117);
+}
