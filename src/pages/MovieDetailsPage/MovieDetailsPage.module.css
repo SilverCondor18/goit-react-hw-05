@@ -1,0 +1,39 @@
+.poster
+{
+    width: calc(100% / 6);
+    height: auto;
+}
+
+.movieContainer
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.movieInfo
+{
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    align-items: center;
+}
+
+.infoBlock
+{
+    width: 75%;
+}
+
+.title, .subtitle, .text
+{
+    margin-bottom: 32px;
+}
+
+.back
+{
+    margin-bottom: 16px;
+}
+
+.links
+{
+    margin-bottom: 16px;
+}

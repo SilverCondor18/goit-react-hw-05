@@ -1,0 +1,19 @@
+.casts
+{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.actor
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.photo
+{
+    width: calc(100% / 8);
+    height: auto;
+}

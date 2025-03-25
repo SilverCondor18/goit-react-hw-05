@@ -4,6 +4,10 @@ const authHeaders = {
     Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMDNiNGIyYWYzOGEwZjMzNDBmYjY3ODg0MTBhYTQ0YiIsIm5iZiI6MTc0Mjg0MDc2Ni42NzM5OTk4LCJzdWIiOiI2N2UxYTNiZWQ3MGM2MTU5MDM3NWJiMTIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.68M6OI3HwjD6ahEtwntRsEFZGgxdDHz5ACw8KdEPWJQ"
 };
 
+export const getImageUrl = imagePath => {
+    return `https://image.tmdb.org/t/p/w500${imagePath}`;
+}
+
 export const getTrendingMovies = async () => {
     const url = "https://api.themoviedb.org/3/trending/movie/day";
     const options = {

@@ -1,0 +1,18 @@
+.error
+{
+    color: orangered;
+}
+
+.reviews
+{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.review
+{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
