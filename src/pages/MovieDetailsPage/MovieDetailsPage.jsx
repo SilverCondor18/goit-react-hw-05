@@ -1,7 +1,7 @@
 import { useLocation, useParams, Link, Outlet } from "react-router-dom"
 import css from "./MovieDetailsPage.module.css"
 import { getMovieDetails, getImageUrl } from "../../tmdb-api";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ClipLoader } from "react-spinners";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
@@ -12,6 +12,7 @@ export default function MovieDetailsPage()
     const [movie, setMovie] = useState();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    const backHref = useRef(location.state);
 
     useEffect(() => {
         const getMovie = async () => {
@@ -38,7 +39,7 @@ export default function MovieDetailsPage()
             <ClipLoader loading={loading} />
             {error && <ErrorMessage />}
             {movie && <div className={css.movieContainer}>
-                <Link to={location.state}><button className={css.back} type="button">← Go back</button></Link>
+                <Link to={backHref.current}><button className={css.back} type="button">← Go back</button></Link>
                 <div className={css.movieInfo}>
                     <img className={css.poster} src={getImageUrl(movie.poster_path)} alt={movie.title} />
                     <div className={css.infoBlock}>
