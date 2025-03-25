@@ -34,7 +34,7 @@ export default function MovieReviews()
         <>
             <ClipLoader loading={loading} />
             {error && <ErrorMessage />}
-            {reviews?.length > 0 ? <ul className={css.reviews}>
+            {reviews?.results.length > 0 ? <ul className={css.reviews}>
                 {reviews.results.map(review => (
                     <li key={review.id} className={css.review}>
                         <h3 className={css.author}>{review.author}</h3>
